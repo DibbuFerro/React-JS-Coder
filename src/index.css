@@ -19,5 +19,9 @@ code {
 }
  #grupoCards div{
       max-width: 18rem;
-      min-width: 15rem
+      min-width: 15rem;
+ }
+ #grupoCards img{
+  max-height: 250px;
+  min-width: 200px;
  }

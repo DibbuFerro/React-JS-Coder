@@ -6,7 +6,7 @@ import Spinner from '../utilidades/spinner'
 
  const Cards =()=>{
 
-    const productos=[
+    /*const productos=[
         {id:0, stock:5, nombre: "Producto1", precio:2000,descripcion:"Breve descripcion del producto"},
         {id:1, stock:6, nombre: "Producto2", precio:5000,descripcion:"Breve descripcion del producto"},
         {id:2, stock:2, nombre: "Producto3", precio:200,descripcion:"Breve descripcion del producto"},
@@ -16,7 +16,22 @@ import Spinner from '../utilidades/spinner'
         {id:6, stock:2, nombre: "Producto7", precio:1200,descripcion:"Breve descripcion del producto"},
         {id:7, stock:2, nombre: "Producto8", precio:4000,descripcion:"Breve descripcion del producto"}
         
-    ]
+    ]*/
+
+    //Traigo productos de API
+    const [productos, setProductos]=useState([])
+    
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>{
+                setProductos(json)
+            })
+    },[])
+             
+            
+    
+
     const [cargando,setCargando]= useState(true)
     const [products, setProducts]= useState([])
     const promesa= new Promise((res, rej)=>{
