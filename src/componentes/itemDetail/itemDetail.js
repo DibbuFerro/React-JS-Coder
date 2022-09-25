@@ -5,7 +5,7 @@ const ItemDetail =({item})=>{
     console.log(item)
     return(
         <>  
-            <div className="Container-xl row">  
+            <div className="Container-lg row mt-5">  
                 <div className="row bg-light offset-2 col-8 p-2 rounded mb-2">
                     <div className="col-6">
                         <img src={item.image} className="w-50" alt="Foto-1" />

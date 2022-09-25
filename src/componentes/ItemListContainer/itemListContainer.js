@@ -3,7 +3,7 @@ import ItemList from '../ItemList/itemList.js'
 
 const Content =()=>{
     
-    const greeting="Compras de adultos responsables."
+    const greeting="Nuestros Productos."
 
 
 

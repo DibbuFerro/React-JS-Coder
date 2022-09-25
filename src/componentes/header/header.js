@@ -1,15 +1,23 @@
 import React from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from "react-router-dom";
 import Navbar from './navbar/navbar.js'
-
+import Logo from  '../../assets/logo.png'
+import Cart from '../cart/cart.js'
 const Header = ()=>{
+    
     return(
         <>
-        <div className="navbar container-flex bg-info border-bottom border-danger" >
+        <div className=" container-flex bg-dark border-bottom border-danger" >
+            <span>
+                <Link to='cart'>
+                    <Cart/>
+                </Link>
+            </span>
             <div className="container-xl">
-                <h1 id="nombreSitio">PrettyShop</h1>
-            <Navbar/>
-            <ShoppingCartIcon color="secondary" fontSize="large" />
+                <Link to='/'>
+                <img src={Logo} className=" position-relative top-0 start-50 translate-middle-x p-4 " width='200px'></img>
+                </Link>
+                <Navbar />
             </div>   
         </div>
         </>

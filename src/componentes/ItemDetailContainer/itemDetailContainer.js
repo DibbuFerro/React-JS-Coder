@@ -1,17 +1,20 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import ItemDetail from '../itemDetail/itemDetail'
-
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer =()=>{
 
-const[product, setProduct]=useState({})
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=>{
-                setProduct(json)
-            })
-    },[])
+   let {IdProducto}= useParams()
+    console.log(IdProducto)
+
+    const[product, setProduct]=useState({})
+        useEffect(()=>{
+            fetch(`https://fakestoreapi.com/products/${IdProducto}`)
+                .then(res=>res.json())
+                .then(json=>{
+                    setProduct(json)
+                })
+        },[])
 
    
 

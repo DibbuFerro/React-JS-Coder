@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 body {
-  background-color: #ff69b4;
+  background-color: #F7FFF7;
   margin: 0;
 
   -webkit-font-smoothing: antialiased;
@@ -25,3 +25,26 @@ code {
   max-height: 250px;
   min-width: 200px;
  }
+ #cart {
+  background: #05F5C7;
+  padding: 10px;
+  border-radius: 50%;
+}
+span a{
+  text-decoration: none;
+  color:#212529
+}
+span a:hover{
+  color: #212529;
+}
+
+
+  ul a{
+  font-weight: 800;
+  color:#F7FFF7;
+ }
+ ul a:hover{
+  color: #05F5C7;
+  text-decoration: underline;
+ }
+ 
