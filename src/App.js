@@ -8,20 +8,24 @@ import Header from "./componentes/header/header.js"
 import ItemListContainer from './componentes/ItemListContainer/itemListContainer.js'
 import ItemDetailContainer from './componentes/ItemDetailContainer/itemDetailContainer.js'
 import Cart from './componentes/cartView/cart'
+import CartProvider from './Context/CartContext.js'
 
 
 
 const App =()=>{
     return(
         <>
+        
         <BrowserRouter>
-            <Header/>
-            <Routes>
-                <Route path='/' element={<ItemListContainer/>}/>
-                <Route path='categoria/:IdCategoria' element={<ItemListContainer/>}/>
-                <Route path="producto/:IdProducto" element={<ItemDetailContainer/>}/>
-                <Route path="/cart" element={<Cart/>}/>
-            </Routes>
+            <CartProvider>
+                <Header/>
+                <Routes>
+                    <Route path='/' element={<ItemListContainer/>}/>
+                    <Route path='categoria/:IdCategoria' element={<ItemListContainer/>}/>
+                    <Route path="producto/:IdProducto" element={<ItemDetailContainer/>}/>
+                    <Route path="/cart" element={<Cart/>}/>
+                </Routes>
+            </CartProvider>
         </BrowserRouter>
         </>
         
