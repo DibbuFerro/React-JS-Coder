@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from './navbar/navbar.js'
 import Logo from  '../../assets/logo.png'
-import Cart from '../cart/cart.js'
+import Cart from '../cartIcon/cartIcon.js'
 const Header = ()=>{
     
     return(

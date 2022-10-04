@@ -1,6 +1,4 @@
 import React, {useEffect} from "react";
-import ItemCount from '../itemCount/itemCount.js'
-import ProductoImagen from '../../assets/producto.jpg'
 import { Link } from "react-router-dom";
 
 
