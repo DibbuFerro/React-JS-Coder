@@ -4,12 +4,16 @@ import { useContext } from "react";
 import { Context } from "../../Context/CartContext";
 
 const Cart = () =>{
-    const { totalItem} = useContext(Context)
+    const { cart } = useContext(Context)
+    const productsInCart = cart.reduce((acc, item)=> acc + item.quantity, 0)
+    console.log(cart)
     return (
+        <>
         <div className="m-4 position-absolute top-0 end-0" id="cart">
             <ShoppingCartIcon color="dark" fontSize="large" />
-           <span>{totalItem}</span>
+           {productsInCart !== 0 ? <h4 className="badge text-dark">{productsInCart}</h4> : null} 
         </div>
+        </>
     )
 }
 export default Cart 
