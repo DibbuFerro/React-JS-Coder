@@ -1,52 +1,39 @@
 import React from "react";
 import Item from './item.js'
 import { useState, useEffect } from "react";
-import Spinner from '../utilidades/spinner'
+
 import { useParams } from "react-router-dom";
+import { db } from '../../firebase/firebase'
+import {getDocs, collection, query, where} from 'firebase/firestore'
 
  const Cards =()=>{  
      
     const [productos, setProductos]=useState([])
-    let {IdCategoria}=useParams()
-    const URL_BASE="https://fakestoreapi.com/products"
-    const URL_CATEGORY="https://fakestoreapi.com/products/category/"
+    let { IdCategoria }=useParams()
+    console.log(IdCategoria);
+
+    
 
     useEffect(()=>{
-        fetch(IdCategoria === undefined ? URL_BASE : `${URL_CATEGORY}${IdCategoria}`)
-            .then(res=>res.json())
-            .then(json=>{
-                setProductos(json)
-            })
-    },[IdCategoria])
-   
-    const [cargando,setCargando]= useState(true)
-    const [products, setProducts]= useState([])
-    const promesa= new Promise((res, rej)=>{
-        res(productos)
-    }) 
-    useEffect(()=>{
-        promesa
-        
+
+        const productsCollection = collection(db, 'products');
+        const productCategory=query(productsCollection, where('category','==', `${IdCategoria}`))
+	 let url= ( IdCategoria === undefined ? productsCollection : productCategory)
+        getDocs (url)
         .then((data)=>{
-            setTimeout(() => {
-                setCargando(false)
-                setProducts(data)
-            }, 1500);
-            ;
+            const productList =data.docs.map((product)=>{
+                return{
+                    ...product.data(),
+                    id: product.id
+                } 
+            })
+            setProductos(productList)
         })
-        .catch(()=>{
-            console.log("Algo salio mal")
-        })
-    },[])
-
+    },[IdCategoria]) 
+   
     return(
         <div className="card-Group row my-4" id="grupoCards">
-            
-            {cargando ? <Spinner/> : 
-
-                <Item items={productos}/>
-            }
-            
+            <Item items={productos}/>
         </div>
     )
  }

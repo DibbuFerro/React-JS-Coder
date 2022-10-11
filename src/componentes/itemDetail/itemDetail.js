@@ -20,7 +20,7 @@ const ItemDetail =({item})=>{
             <div className="Container-lg row mt-5">  
                 <div className="row bg-light offset-3 col-6 p-2 rounded mb-2">
                     <div className="col-6">
-                        <img src={item.image} className="w-50" alt="Foto-1" />
+                        <img src={item.image} className="w-100" alt="Foto-1" />
                     </div>
                     <div className="col ">
                         <div className="container-xl text-center">

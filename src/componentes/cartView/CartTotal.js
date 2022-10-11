@@ -14,7 +14,7 @@ const CartTotal=()=>{
                 <td colSpan="2"></td>
                 <td > <h3>Total</h3></td>
                 
-                <td>{total.toFixed(2)}</td>
+                <td>$ {total.toFixed(2)}</td>
                 <td> <button className="btn btn-sm btn-outline-success rounded">Finalizar Compra</button> </td>
             </tfoot>
         </>

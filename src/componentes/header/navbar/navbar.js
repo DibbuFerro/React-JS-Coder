@@ -4,10 +4,10 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar =()=>{
 
     const categorias=[
-        { id:0, nombre:"D&D", ruta:'/categoria/electronics'},
-        { id:1, nombre:"Pathfinder", ruta:'/categoria/jewelery'}, 
-        { id:2, nombre:"Call of Cthulhu", ruta:"/categoria/men's clothing"},
-        { id:3, nombre:"Otros", ruta:"/categoria/women's clothing"}
+        { id:0, nombre:"D&D", ruta:'/categoria/dnd'},
+        { id:1, nombre:"Pathfinder", ruta:'/categoria/pathfinder'}, 
+        { id:2, nombre:"Call of Cthulhu", ruta:"/categoria/cthulhu"},
+        { id:3, nombre:"Otros", ruta:"/categoria/otros"}
     ]
 
     return(

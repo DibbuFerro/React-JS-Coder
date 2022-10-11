@@ -17,7 +17,7 @@ const CardItem =()=>{
                     <td className="text-center">
                         <h4>{producto.quantity}</h4>
                     </td>
-                    <td className="text-center text-lg text-medium">{(producto.item.price * producto.quantity)}</td>
+                    <td className="text-center text-lg text-medium">${(producto.item.price * producto.quantity)}</td>
                     <td className="text-center"><button onClick={(id)=>removeItem(producto.item.id)} className="rounded btn btn-sm btn-outline-danger">X</button></td>
                 </tr>
         })}
