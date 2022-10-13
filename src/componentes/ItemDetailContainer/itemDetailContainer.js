@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from '../itemDetail/itemDetail'
 import { useParams } from "react-router-dom";
 import {db} from "../../firebase/firebase"

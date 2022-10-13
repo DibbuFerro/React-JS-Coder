@@ -29,7 +29,7 @@ const ItemDetail =({item})=>{
                             <h2 className="m-3">{item.price}$</h2>
 
                                 {!isButtonPressed?(
-                                    <ItemCount initial={1} stock={4} onAdd={onAdd} />
+                                    <ItemCount initial={1}  stock={item.stock} onAdd={onAdd} />
                                     ):(
                                     <FinalCompra/>
                                 )}    

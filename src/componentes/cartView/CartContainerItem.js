@@ -5,7 +5,7 @@ import { Context } from "../../Context/CartContext.js";
 import { useContext } from "react";
 
 const CartContainerItem =()=>{
-    const { cart, clearCart } = useContext (Context)
+    const {clearCart } = useContext (Context)
     return (
     <> 
         <div >
