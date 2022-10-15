@@ -29,7 +29,7 @@ const App =()=>{
                     <Route path="/cart" element={<Cart/>}/>
                     <Route path="/checkOut" element ={<CheckOut/>}/>
                     <Route path="/deliveryStatus" element={<DeliveryStatusContainer/>}/>
-                    <Route path="deliveryStatus/view/:codigoDeVenta" element={<DeliveryStatusView/>} />
+                    <Route path="deliveryStatus/view/:idVenta" element={<DeliveryStatusView/>} />
                 </Routes>
             </CartProvider>
         </BrowserRouter>

@@ -1,12 +1,14 @@
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import React from "react";
-
+import { Context } from "../../Context/CartContext";
+import { useContext } from "react";
 //import DeliveryStatusView from "./DeliveryStatusView";
 import { Link } from "react-router-dom";
 
 
 
 const DeliveryStatusContainer =()=>{
+    const { setIdVenta, idVenta } = useContext(Context)
 
     const [codigo, setCodigo]=useState("")
     
@@ -14,7 +16,12 @@ const DeliveryStatusContainer =()=>{
         setCodigo({
             [e.target.name]:e.target.value
         })
+        
     }
+    useEffect(() => {
+        setIdVenta(codigo.id)
+        console.log("CAMBIO VALORES");
+      }, [codigo]);
 
     return (
         <>{}

@@ -10,30 +10,6 @@ const CartTotal=()=>{
     const { total } = useContext(Context)
    
 
-    /*const [datosComprador, setDatosComprador]= useState({})
-    const finalizarCompra=()=>{
-        const ventasCollection = collection (db, "sells")
-        addDoc (ventasCollection,{
-            comprador : datosComprador,
-            items: cart,
-            date: serverTimestamp(),
-            total: `$${total}`
-
-        })
-        .then (result=>{
-            console.log(result.id);
-            clearCart()
-
-        })
-
-
-    }
-    const actualizarStock =()=>{
-        const updateStock = doc (db, "products", id)
-        updateDoc(updateStock, {stock:50})
-
-    }*/
-
 
     return(
         <>
