@@ -50,4 +50,36 @@ span a:hover{
  #CartLink{
   color: #05f5c7
  }
- 
+ #buys{
+  background-color: #212121;
+  border-color: #05F5C7;
+  font-weight: 500;
+ }
+ #buys a{
+  color: #05F5C7;
+ }
+ #buys:hover{
+  background-color: #05F5C7;
+ }
+
+#buys a:hover{
+  color: #212121;
+}
+#grupoCards div{
+  border-color: #212529;
+  border-width: 4px;
+  margin: 10px;
+  max-width: 19rem;
+}
+#grupoCards div a{
+  font-weight: 700;
+  text-decoration: none;
+  color: #05F5C7;
+}
+#grupoCards div a:hover{
+  color: #212121;
+}
+.Tittle{
+  background-color: #05F5C7;
+  font-weight: 600;
+}
